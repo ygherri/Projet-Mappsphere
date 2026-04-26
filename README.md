@@ -1,27 +1,129 @@
-# MyApp
+# MappSphere 🌍
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+MappSphere est une application web développée avec Angular et Firebase.  
+Elle permet à l’utilisateur de se connecter avec Google, d’afficher sa position sur une carte interactive et de consulter la météo actuelle de sa localisation.
 
-## Development server
+## 🚀 Démo en ligne
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Lien de l'application :  
+https://mappsphere.firebaseapp.com
 
-## Code scaffolding
+## ✨ Fonctionnalités
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Connexion avec Google
+- Authentification avec Firebase Authentication
+- Affichage de la position actuelle de l’utilisateur
+- Carte interactive avec Leaflet et OpenStreetMap
+- Récupération de la météo selon la géolocalisation
+- Affichage de la ville et de la température actuelle
+- Enregistrement de l’historique météo
+- Déconnexion de l’utilisateur
+- Interface responsive
 
-## Build
+## 🛠️ Technologies utilisées
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Angular 17
+- TypeScript
+- Firebase
+- Firebase Authentication
+- Firestore
+- AngularFire
+- Leaflet
+- OpenStreetMap
+- OpenWeatherMap API
+- RxJS
+- Tailwind CSS
+- HTML5
+- CSS3
 
-## Running unit tests
+## 📦 Installation en local
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Cloner le projet :
 
-## Running end-to-end tests
+```bash
+git clone https://github.com/ygherri/Projet-Mappsphere.git
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Accéder au dossier :
 
-## Further help
+```bash
+cd Projet-Mappsphere
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Installer les dépendances :
+
+```bash
+npm install
+```
+
+Lancer le serveur de développement :
+
+```bash
+ng serve
+```
+
+Ouvrir l'application :
+
+```text
+http://localhost:4200/
+```
+
+## 🔥 Configuration Firebase
+
+Le projet utilise Firebase pour l’authentification Google et le stockage de l’historique météo.
+
+Exemple de configuration Firebase :
+
+```ts
+export const environment = {
+  production: false,
+  firebaseConfig: {
+    apiKey: "VOTRE_API_KEY",
+    authDomain: "VOTRE_AUTH_DOMAIN",
+    projectId: "VOTRE_PROJECT_ID",
+    storageBucket: "VOTRE_STORAGE_BUCKET",
+    messagingSenderId: "VOTRE_MESSAGING_SENDER_ID",
+    appId: "VOTRE_APP_ID"
+  }
+};
+```
+
+## 🌦️ API météo
+
+L’application utilise une API météo pour récupérer les données en fonction de la latitude et de la longitude de l’utilisateur.
+
+Exemple de données affichées :
+
+- ville actuelle ;
+- température actuelle ;
+- historique météo par date.
+
+## 🗂️ Routes principales
+
+| Route | Description |
+|---|---|
+| `/home` | Page d’accueil et connexion Google |
+| `/dashboard` | Carte, position actuelle et météo |
+| `/history` | Historique météo |
+| `**` | Page 404 |
+
+## 🏗️ Build
+
+Créer une version de production :
+
+```bash
+ng build
+```
+
+Les fichiers générés se trouvent dans le dossier :
+
+```text
+dist/
+```
+
+## 👩‍💻 Auteur
+
+Projet développé par **GHERRI Yesmine**.
+
+GitHub :  
+https://github.com/ygherri
